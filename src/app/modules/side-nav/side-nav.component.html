@@ -1,1 +1,30 @@
-<p>side-nav works!</p>
+<nav>
+  <header>
+    <div class="section-profile">
+      <button (click)="openMyProfile()">
+        meu nome
+      </button>
+      <div>a</div>
+      <!-- open and close sidenav -->
+    </div>
+  </header>
+  <main>
+    <div class="button-sidenav add-task" (click)="addTask()">
+      <span>
+        Add task
+      </span>
+    </div>
+    <div class="button-sidenav inbox" (click)="openInbox()">
+      <span>Inbox</span>
+      <p>10</p>
+    </div>
+    <div class="button-sidenav today" (click)="openToday()">
+      <span>Today</span>
+      <p>7</p>
+    </div>
+    <div class="button-sidenav completed" (click)="openCompleted()">
+      <span>Completed</span>
+    </div>
+  </main>
+  <footer></footer>
+</nav>
