@@ -1,29 +1,44 @@
 <nav>
   <header>
-    <div class="section-profile">
-      <button (click)="openMyProfile()">
-        meu nome
+      <button (click)="openMyProfile()" class="btn-my-profile" [matMenuTriggerFor]="menu">
+        Gustavo
+        <mat-icon fontIcon="keyboard_arrow_down"></mat-icon>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                item
+            </button>
+        </mat-menu>
       </button>
-      <div>a</div>
+      <div>
+        <mat-icon fontIcon="chrome_reader_mode" class="menu-side"></mat-icon>
+      </div>
       <!-- open and close sidenav -->
-    </div>
   </header>
   <main>
-    <div class="button-sidenav add-task" (click)="addTask()">
-      <span>
+    <div class="button-sidenav" (click)="addTask()">
+      <button>
+        <mat-icon fontIcon="add_circle"></mat-icon>
         Add task
-      </span>
+      </button>
     </div>
     <div class="button-sidenav inbox" (click)="openInbox()">
-      <span>Inbox</span>
+      <button>
+        <mat-icon fontIcon="inbox"></mat-icon>
+        Inbox</button>
       <p>10</p>
     </div>
     <div class="button-sidenav today" (click)="openToday()">
-      <span>Today</span>
+      <button>
+        <mat-icon fontIcon="today"></mat-icon>
+        Today
+      </button>
       <p>7</p>
     </div>
     <div class="button-sidenav completed" (click)="openCompleted()">
-      <span>Completed</span>
+      <button>
+        <mat-icon fontIcon="check_circle"></mat-icon>
+        Completed
+      </button>
     </div>
   </main>
   <footer></footer>

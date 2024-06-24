@@ -10,5 +10,5 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     imports: [SideNavComponent, MatSidenavModule]
 })
 export class HomeComponent {
-
+  openSidenav: boolean = true;
 }
