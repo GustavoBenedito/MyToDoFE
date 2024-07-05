@@ -1,0 +1,17 @@
+
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
+
+*{
+  font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif
+}
+
+mat-drawer{
+  background-color: #322f2a;
+  width: 25vw;
+  min-width: 250px;
+  max-width: 300px;
+}

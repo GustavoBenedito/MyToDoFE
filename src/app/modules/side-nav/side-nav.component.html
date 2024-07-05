@@ -1,1 +1,45 @@
-<p>side-nav works!</p>
+<nav>
+  <header>
+      <button (click)="openMyProfile()" class="btn-my-profile" [matMenuTriggerFor]="menu">
+        Gustavo
+        <mat-icon fontIcon="keyboard_arrow_down"></mat-icon>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                item
+            </button>
+        </mat-menu>
+      </button>
+      <div>
+        <mat-icon fontIcon="chrome_reader_mode" class="menu-side"></mat-icon>
+      </div>
+      <!-- open and close sidenav -->
+  </header>
+  <main>
+    <div class="button-sidenav" (click)="addTask()">
+      <button>
+        <mat-icon fontIcon="add_circle"></mat-icon>
+        Add task
+      </button>
+    </div>
+    <div class="button-sidenav inbox" (click)="openInbox()">
+      <button>
+        <mat-icon fontIcon="inbox"></mat-icon>
+        Inbox</button>
+      <p>10</p>
+    </div>
+    <div class="button-sidenav today" (click)="openToday()">
+      <button>
+        <mat-icon fontIcon="today"></mat-icon>
+        Today
+      </button>
+      <p>7</p>
+    </div>
+    <div class="button-sidenav completed" (click)="openCompleted()">
+      <button>
+        <mat-icon fontIcon="check_circle"></mat-icon>
+        Completed
+      </button>
+    </div>
+  </main>
+  <footer></footer>
+</nav>
