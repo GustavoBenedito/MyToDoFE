@@ -1,40 +1,41 @@
 import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule, MatMenuPanel} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
   imports: [MatIconModule, MatButtonModule, MatMenuModule],
   templateUrl: './side-nav.component.html',
-  styleUrl: './side-nav.component.scss'
+  styleUrl: './side-nav.component.scss',
 })
 export class SideNavComponent {
-  myProfilefontIcon:string = ''
-  openMenuMyProfile:boolean = false;
+  myProfilefontIcon: string = '';
+  openMenuMyProfile: boolean = false;
   menu = true;
 
-  constructor(){
+  constructor(public homeComponent: HomeComponent) {}
+
+  addTask() {
+    return 'implement the function';
   }
 
-  addTask(){
-    return 'implement the function'
-  }
-
-  openMyProfile(){
+  openMyProfile() {
     this.openMenuMyProfile = !this.openMenuMyProfile;
   }
 
-  openInbox(){
-    return 'implement the function'
+  openInbox() {
+    return 'implement the function';
   }
 
-  openToday(){
-    return 'implement the function'
+  openToday() {
+    this.homeComponent.openTodayPage();
+    return 'implement the function';
   }
 
-  openCompleted(){
-    return 'implement the function'
+  openCompleted() {
+    return 'implement the function';
   }
 }

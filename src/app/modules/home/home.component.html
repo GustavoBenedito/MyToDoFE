@@ -1,6 +1,8 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer #drawer mode="side" [opened]="openSidenav"><app-side-nav></app-side-nav></mat-drawer>
+  <mat-drawer #drawer mode="side" [opened]="openSidenav">
+    <app-side-nav></app-side-nav>
+  </mat-drawer>
   <mat-drawer-content>
-      <app-today *ngIf="todayPage"></app-today>
+    <app-add-task *ngIf="addTaskPage"></app-add-task>
   </mat-drawer-content>
 </mat-drawer-container>
