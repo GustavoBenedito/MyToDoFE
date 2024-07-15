@@ -1,0 +1,77 @@
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  color: white;
+  font-size: 14px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-my-profile{
+  font-weight: 500;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0.7;
+  border: none;
+  width: 100px;
+  background-color: transparent;
+}
+
+.btn-my-profile:hover{
+  opacity: 1;
+}
+
+.button-sidenav{
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transform: 0.3s;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+
+.button-sidenav button{
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin-right: 32.5%;
+  cursor: pointer;
+}
+
+.button-sidenav button mat-icon{
+  margin-right: 10px
+}
+.button-sidenav:hover{
+  opacity: 1;
+}
+
+.menu-side{
+  cursor: pointer;
+}
