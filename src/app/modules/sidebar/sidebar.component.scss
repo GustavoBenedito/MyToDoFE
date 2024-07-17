@@ -60,7 +60,7 @@ main {
   border: none;
   display: flex;
   align-items: center;
-  width: 150px;
+  width: 200px;
   margin-right: 32.5%;
   cursor: pointer;
 }
@@ -74,4 +74,9 @@ main {
 
 .menu-side{
   cursor: pointer;
+}
+a{
+  display: flex;
+  color: white;
+  text-decoration: none;
 }
