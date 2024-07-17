@@ -12,7 +12,6 @@
     <div>
       <mat-icon fontIcon="chrome_reader_mode" class="menu-side"></mat-icon>
     </div>
-    open and close sidenav
   </header>
   <main>
     <div class="button-sidenav" (click)="addTask()">
@@ -23,15 +22,6 @@
         </button>
       </a>
     </div>
-    <div class="button-sidenav inbox" (click)="openInbox()">
-      <a routerLink="/inbox">
-        <button>
-          <mat-icon fontIcon="inbox"></mat-icon>
-          Inbox
-        </button>
-        <p>10</p>
-      </a>
-    </div>
     <div class="button-sidenav today" (click)="openToday()">
       <a routerLink="/today">
         <button>
@@ -39,6 +29,15 @@
           Today
         </button>
         <p>7</p>
+      </a>
+    </div>
+    <div class="button-sidenav inbox" (click)="openInbox()">
+      <a routerLink="/inbox">
+        <button>
+          <mat-icon fontIcon="inbox"></mat-icon>
+          Inbox
+        </button>
+        <p>10</p>
       </a>
     </div>
     <div class="button-sidenav completed" (click)="openCompleted()">
