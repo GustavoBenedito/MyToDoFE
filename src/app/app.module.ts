@@ -13,6 +13,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TaskListBodyComponent } from './modules/task-list-body/task-list-body.component';
+import { DetailViewComponent } from './modules/detail-view/detail-view.component';
+import {MatListModule} from '@angular/material/list';
+import { provideHttpClient, withFetch } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddTaskComponent,
     CompletedComponent,
     InboxComponent,
-    SidebarComponent
+    SidebarComponent,
+    TaskListBodyComponent,
+    DetailViewComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +36,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
+    MatListModule,
     BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
